@@ -26,10 +26,10 @@ var MapsLib = {
 
   //MODIFY the encrypted Table IDs of your Fusion Tables (found under File => About)
   //NOTE: numeric IDs will be depricated soon
-  fusionTableId:      "1p3HtGOMZpCYHwwbZPLPGo6rMZ7TO8w_TYA-3wjzg", //Point data layer
+  fusionTableId:      "1MsNpAr8bZ3EQhQOqOH9HvlCj8Dy2eZsmp8cMHso", //Point data layer
   
-  polygon1TableID:    "1ceippR4giBiF-pT9PE1YAUvebFp6_NKvYriccYo", //Outline map layer of CT town boundaries
-  polygon2TableID:    "1VopQGBhRKyyk25EIA5ptScvULxR68d43RhZ1ycM", //Thematic map layer of selected CT school districts
+  polygon1TableID:    "1MsNpAr8bZ3EQhQOqOH9HvlCj8Dy2eZsmp8cMHso", //Outline map layer of CT town boundaries
+   //Thematic map layer of selected CT school districts
 
   //*MODIFY Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
   //*Important* this key is for demonstration purposes. please register your own.
@@ -91,14 +91,6 @@ var MapsLib = {
       templateId: 2
     });
 
-    MapsLib.polygon2 = new google.maps.FusionTablesLayer({
-      query: {
-        from:   MapsLib.polygon2TableID,
-        select: "geometry"
-      },
-      styleId: 2,
-      templateId: 2
-    });
 
     //reset filters
     $("#search_address").val(MapsLib.convertToPlainString($.address.parameter('address')));
@@ -139,9 +131,9 @@ var MapsLib = {
     //-- TEXTUAL OPTION to display legend and filter by non-numerical data in your table
     var type_column = "'Program Type'";  // -- note use of single & double quotes for two-word column header
     var tempWhereClause = [];
-    if ( $("#cbType1").is(':checked')) tempWhereClause.push("Interdistrict");
-    if ( $("#cbType2").is(':checked')) tempWhereClause.push("District");
-    if ( $("#cbType3").is(':checked')) tempWhereClause.push("MorePreK");
+    if ( $("#cbType1").is(':checked')) tempWhereClause.push("0-50");
+    if ( $("#cbType2").is(':checked')) tempWhereClause.push("51-69");
+    if ( $("#cbType3").is(':checked')) tempWhereClause.push("70-100");
     whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
 
     //-- NUMERICAL OPTION - to display and filter a column of numerical data in your table, use this instead
