@@ -117,9 +117,6 @@ var MapsLib = {
     if ($("#rbPolygon1").is(':checked')) {
       MapsLib.polygon1.setMap(map);
     }
-    else if ($("#rbPolygon2").is(':checked')) {
-      MapsLib.polygon2.setMap(map);
-    }
 
     var address = $("#search_address").val();
     MapsLib.searchRadius = $("#search_radius").val();
@@ -129,7 +126,7 @@ var MapsLib = {
   //-----custom filters for point data layer
     //---MODIFY column header and values below to match your Google Fusion Table AND index.html
     //-- TEXTUAL OPTION to display legend and filter by non-numerical data in your table
-    var type_column = "'Program Type'";  // -- note use of single & double quotes for two-word column header
+    var type_column = "2013";  // -- note use of single & double quotes for two-word column header
     var tempWhereClause = [];
     if ( $("#cbType1").is(':checked')) tempWhereClause.push("0-50");
     if ( $("#cbType2").is(':checked')) tempWhereClause.push("51-69");
@@ -207,8 +204,6 @@ var MapsLib = {
       MapsLib.searchrecords.setMap(null);
     if (MapsLib.polygon1 != null)
       MapsLib.polygon1.setMap(null);
-    if (MapsLib.polygon2 != null)
-      MapsLib.polygon2.setMap(null);
     if (MapsLib.addrMarker != null)
       MapsLib.addrMarker.setMap(null);
     if (MapsLib.searchRadiusCircle != null)
