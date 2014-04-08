@@ -62,8 +62,8 @@ var MapsLib = {
       styles: [
         {
           stylers: [
-            { saturation: 100 }, // MODIFY Saturation and Lightness if needed
-            { lightness: 100 }     // Current values make thematic polygon shading stand out over base map
+            { saturation: 0 }, // MODIFY Saturation and Lightness if needed
+            { lightness: 0 }     // Current values make thematic polygon shading stand out over base map
           ]
         }
       ]
