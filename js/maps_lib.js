@@ -84,8 +84,8 @@ var MapsLib = {
     // MODIFY if needed: defines background polygon1 and polygon2 layers
     MapsLib.polygon1 = new google.maps.FusionTablesLayer({
       query: {
-        from:   1WxDbHWNixQEK8VyTTKAiOsEcAaFlBoy9PdTD5EE,
-        select: "Address"
+        from:   MapsLib.polygon1TableID,
+        select: "geometry"
       },
       styleId: 2,
       templateId: 2
