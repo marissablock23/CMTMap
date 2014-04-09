@@ -85,7 +85,7 @@ var MapsLib = {
     MapsLib.polygon1 = new google.maps.FusionTablesLayer({
       query: {
         from:   MapsLib.polygon1TableID,
-        select: "Address"
+        select: "geometry"
       },
       styleId: 2,
       templateId: 2
