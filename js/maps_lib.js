@@ -26,10 +26,10 @@ var MapsLib = {
 
   //MODIFY the encrypted Table IDs of your Fusion Tables (found under File => About)
   //NOTE: numeric IDs will be depricated soon
-  fusionTableId:      "1p3HtGOMZpCYHwwbZPLPGo6rMZ7TO8w_TYA-3wjzg", //Point data layer
+  fusionTableId:      "1MsNpAr8bZ3EQhQOqOH9HvlCj8Dy2eZsmp8cMHso", //Point data layer
   
-  polygon1TableID:    "1ceippR4giBiF-pT9PE1YAUvebFp6_NKvYriccYo", //Outline map layer of CT town boundaries
-  polygon2TableID:    "1VopQGBhRKyyk25EIA5ptScvULxR68d43RhZ1ycM", //Thematic map layer of selected CT school districts
+  polygon1TableID:    "1WxDbHWNixQEK8VyTTKAiOsEcAaFlBoy9PdTD5EE", //Outline map layer of CT town boundaries
+  //polygon2TableID:    "1VopQGBhRKyyk25EIA5ptScvULxR68d43RhZ1ycM", //Thematic map layer of selected CT school districts
 
   //*MODIFY Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
   //*Important* this key is for demonstration purposes. please register your own.
@@ -62,8 +62,8 @@ var MapsLib = {
       styles: [
         {
           stylers: [
-            { saturation: -100 }, // MODIFY Saturation and Lightness if needed
-            { lightness: 40 }     // Current values make thematic polygon shading stand out over base map
+            { saturation: 0 }, // MODIFY Saturation and Lightness if needed
+            { lightness: 0 }     // Current values make thematic polygon shading stand out over base map
           ]
         }
       ]
