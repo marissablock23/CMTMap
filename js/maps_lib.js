@@ -128,9 +128,9 @@ var MapsLib = {
     //-- TEXTUAL OPTION to display legend and filter by non-numerical data in your table
     var type_column = "Category";  // -- note use of single & double quotes for two-word column header
     var tempWhereClause = [];
-    if ( $("#cbType1").is(':checked')) tempWhereClause.push("1");
-    if ( $("#cbType2").is(':checked')) tempWhereClause.push("2");
-    if ( $("#cbType3").is(':checked')) tempWhereClause.push("3");
+    if ( $("#cbType1").is(':checked')) tempWhereClause.push("red");
+    if ( $("#cbType2").is(':checked')) tempWhereClause.push("yellow");
+    if ( $("#cbType3").is(':checked')) tempWhereClause.push("green");
     whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join("','") + "')";
 
     //-- NUMERICAL OPTION - to display and filter a column of numerical data in your table, use this instead
