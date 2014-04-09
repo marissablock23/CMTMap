@@ -26,7 +26,7 @@ var MapsLib = {
 
   //MODIFY the encrypted Table IDs of your Fusion Tables (found under File => About)
   //NOTE: numeric IDs will be depricated soon
-  fusionTableId:      "1v3OR9zvvmcJU6hZiXZZ9OgxeieMl4XUbcopljq8P", //Point data layer
+  fusionTableId:      "1MsNpAr8bZ3EQhQOqOH9HvlCj8Dy2eZsmp8cMHso", //Point data layer
   
   polygon1TableID:    "1WxDbHWNixQEK8VyTTKAiOsEcAaFlBoy9PdTD5EE", //Outline map layer of CT town boundaries
   //polygon2TableID:    "1VopQGBhRKyyk25EIA5ptScvULxR68d43RhZ1ycM", //Thematic map layer of selected CT school districts
@@ -126,7 +126,7 @@ var MapsLib = {
   //-----custom filters for point data layer
     //---MODIFY column header and values below to match your Google Fusion Table AND index.html
     //-- TEXTUAL OPTION to display legend and filter by non-numerical data in your table
-    var type_column = "Category";  // -- note use of single & double quotes for two-word column header
+    var type_column = "category";  // -- note use of single & double quotes for two-word column header
     var tempWhereClause = [];
     if ( $("#cbType1").is(':checked')) tempWhereClause.push("1");
     if ( $("#cbType2").is(':checked')) tempWhereClause.push("2");
