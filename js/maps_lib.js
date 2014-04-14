@@ -196,6 +196,7 @@ var MapsLib = {
     });
     MapsLib.searchrecords.setMap(map);
     MapsLib.getCount(whereClause);
+    MapsLib.getList(whereClause);
   },
   // MODIFY if you change the number of Polygon layers
   clearSearch: function() {
@@ -286,6 +287,41 @@ var MapsLib = {
     var numRows = 0;
     if (json["rows"] != null)
       numRows = json["rows"][0];
+    
+    getList: function(whereClause) {
+  var selectColumns = "School, Address, Type ";
+  MapsLib.query(selectColumns, whereClause, "MapsLib.displayList");
+},
+
+displayList: function(json) {
+  MapsLib.handleError(json);
+  var data = json["rows"];
+  var template = "";
+
+  var results = $("#results_list");
+  results.hide().empty(); //hide the existing list and empty it out first
+
+  if (data == null) {
+    //clear results list
+    results.append("<li><span class='lead'>No results found</span></li>");
+  }
+  else {
+    for (var row in data) {
+      template = "\
+        <div class='row-fluid item-list'>\
+          <div class='span12'>\
+            <strong>" + data[row][0] + "</strong>\
+            <br />\
+            " + data[row][1] + "\
+            <br />\
+            " + data[row][2] + "\
+          </div>\
+        </div>"
+      results.append(template);
+    }
+  }
+  results.fadeIn();
+},
 
     var name = MapsLib.recordNamePlural;
     if (numRows == 1)
