@@ -196,7 +196,7 @@ var MapsLib = {
     });
     MapsLib.searchrecords.setMap(map);
     MapsLib.getCount(whereClause);
-    MapsLib.getList(whereClause);
+
   },
   // MODIFY if you change the number of Polygon layers
   clearSearch: function() {
