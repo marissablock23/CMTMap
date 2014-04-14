@@ -196,7 +196,6 @@ var MapsLib = {
     });
     MapsLib.searchrecords.setMap(map);
     MapsLib.getCount(whereClause);
-
   },
   // MODIFY if you change the number of Polygon layers
   clearSearch: function() {
@@ -287,7 +286,6 @@ var MapsLib = {
     var numRows = 0;
     if (json["rows"] != null)
       numRows = json["rows"][0];
-  },
 
     var name = MapsLib.recordNamePlural;
     if (numRows == 1)
