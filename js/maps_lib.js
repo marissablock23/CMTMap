@@ -287,7 +287,8 @@ var MapsLib = {
     var numRows = 0;
     if (json["rows"] != null)
       numRows = json["rows"][0];
-    
+  },
+  
   getList: function(whereClause) {
     var selectColumns = "School, Address, Type ";
     MapsLib.query(selectColumns, whereClause, "MapsLib.displayList");
